@@ -133,17 +133,20 @@ body:not(.dark)::before {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(var(--primary-5) 1px, transparent 1px),
-    radial-gradient(var(--primary-5) 1px, transparent 1px);
+  radial-gradient(var(--primary-5) 1px, transparent 1px);
   background-size: 50px 50px;
   background-position: 0 0, 25px 25px;
   opacity: 0.5;
   z-index: -1;
 }
 
-/* Dark mode enhancements */
+/* Dark mode enhancements with improved contrast */
 .dark {
-  color: #f5f5f5;
+  color: #f5f5f5; /* Lighter text color for better contrast */
   --neutral-5: #1a1a1a;
+  --neutral-4: #444444; /* Darker neutral for better contrast */
+  --neutral-3: #bbbbbb; /* Lighter neutral for better contrast */
+  --neutral-2: #dddddd; /* Much lighter for better contrast */
   --surface-color: #2d2d2d;
   --surface-shadow: rgba(0, 0, 0, 0.3);
   --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
@@ -155,7 +158,27 @@ body:not(.dark)::before {
 }
 
 .dark a:hover {
-  color: var(--primary-4);
+  color: #a0e8e0; /* Lighter hover color for better contrast */
+}
+
+.dark p {
+  color: #e0e0e0; /* Lighter paragraph text for better contrast */
+}
+
+.dark h1,
+.dark h2,
+.dark h3 {
+  color: #ffffff; /* White headings for better contrast */
+}
+
+/* Improve contrast for product info in dark mode */
+.dark .product-info p {
+  color: #d0d0d0;
+}
+
+/* Improve contrast for table text in dark mode */
+.dark .table tbody {
+  color: #e0e0e0;
 }
 
 /* Background pattern for dark mode */
@@ -167,7 +190,7 @@ body.dark::before {
   width: 100%;
   height: 100%;
   background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
   background-position: 0 0, 25px 25px;
   opacity: 0.3;

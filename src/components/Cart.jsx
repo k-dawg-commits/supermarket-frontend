@@ -148,9 +148,9 @@ export default function Cart() {
                             <tr>
                                 <th colSpan="1"></th>
                                 <th className="cart-highlight">
-                                    <Button variant="contained" color="primary" onClick={handleOpenModal} sx={{ mr: 2 }}>
-                                        Checkout
-                                    </Button>
+                                    {/*<Button variant="contained" color="primary" onClick={handleOpenModal} sx={{ mr: 2 }}>*/}
+                                    {/*    Checkout*/}
+                                    {/*</Button>*/}
                                     <TestStripe />
                                 </th>
                                 <th className="cart-highlight">Total</th>

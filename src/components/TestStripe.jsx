@@ -13,8 +13,8 @@ export default function TestStripe() {
             stripe.redirectToCheckout({
                 lineItems: cart.map(product => ({price: product.price_id, quantity: product.quantity})),
                 mode: "payment",
-                successUrl: "http://localhost:5173/about",
-                cancelUrl: "http://localhost:3000/"
+                successUrl: "https://precious-lamington-20492a.netlify.app/",
+                cancelUrl: "https://precious-lamington-20492a.netlify.app/"
             }).then(response => console.log(response.error))
                 .catch(error => console.log(error))
         })

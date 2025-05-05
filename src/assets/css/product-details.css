@@ -61,8 +61,22 @@
   font-size: 16px;
 }
 
+/* Cart table specific styles with improved alignment */
 .table-cart {
   text-align: center;
+}
+
+.table-cart th {
+  text-align: center;
+}
+
+.table-cart th:first-child {
+  text-align: left;
+}
+
+.table-cart tbody td {
+  text-align: center;
+  vertical-align: middle;
 }
 
 .table-cart tbody td:first-child {
@@ -73,10 +87,26 @@
   text-align: left;
 }
 
+.table-cart tfoot th {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-cart tfoot th:first-child {
+  text-align: left;
+}
+
+.table-cart tfoot th:last-child {
+  text-align: center;
+}
+
 .table-cart img {
   border-radius: 8px;
   background-color: var(--neutral-5);
   padding: 5px;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .table-nutrition tbody td:last-child {
@@ -101,7 +131,7 @@
 }
 
 .th-product {
-  text-align: left;
+  text-align: left !important;
   padding-left: 25px;
 }
 
@@ -135,5 +165,9 @@
     flex-direction: column;
     text-align: center;
     padding: 10px;
+  }
+
+  .table-cart tfoot th {
+    padding: 12px 5px;
   }
 }
