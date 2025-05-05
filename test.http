@@ -1,0 +1,7 @@
+### Send a message to the server
+POST http://localhost:5000/submit-message
+Content-Type: application/json
+
+{
+  "message": "Hello from the REST client!"
+}

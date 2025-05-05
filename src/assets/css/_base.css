@@ -1,0 +1,175 @@
+:root {
+  --white: #fff;
+  --black: #000;
+
+  /* Primary colors*/
+  --primary-1: #2b8379;
+  --primary-2: #19a596;
+  --primary-3: #7fd1c7;
+  --primary-4: #7fd1c7;
+  --primary-5: #d0f3ef;
+
+  /* Neutral colors */
+  --neutral-1: #2c2c2c;
+  --neutral-2: #434343;
+  --neutral-3: #94868b;
+  --neutral-4: #d9cfd3;
+  --neutral-5: #f2ecee;
+
+  /* Accent-blue colors */
+  --accent-1: #970e3d;
+  --accent-2: #c43464;
+  --accent-3: #de7699;
+  --accent-4: #e6c3ce;
+  --accent-5: #fff2f7;
+
+  --surface-color: white;
+  --surface-shadow: rgba(0, 0, 0, 0.1);
+
+  /* New variables */
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  --border-radius: 12px;
+  --transition-speed: 0.3s;
+  --header-height: 70px;
+  --container-width: 1200px;
+  --section-spacing: 60px;
+}
+
+body {
+  background-color: var(--neutral-5);
+  margin: 0;
+  font-family: "Inter", "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: var(--neutral-1);
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.7;
+  font-size: 18px;
+  margin-top: 0;
+}
+
+a {
+  color: var(--primary-2);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-1);
+  text-decoration: none;
+}
+
+.rounded {
+  border-radius: var(--border-radius);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Background pattern for light mode */
+body:not(.dark)::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(var(--primary-5) 1px, transparent 1px),
+    radial-gradient(var(--primary-5) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Dark mode enhancements */
+.dark {
+  color: #f5f5f5;
+  --neutral-5: #1a1a1a;
+  --surface-color: #2d2d2d;
+  --surface-shadow: rgba(0, 0, 0, 0.3);
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --hover-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.dark a {
+  color: var(--primary-3);
+}
+
+.dark a:hover {
+  color: var(--primary-4);
+}
+
+/* Background pattern for dark mode */
+body.dark::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: 0 0, 25px 25px;
+  opacity: 0.3;
+  z-index: -1;
+}

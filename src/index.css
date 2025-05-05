@@ -1,0 +1,21 @@
+@import url("assets/css/_base.css");
+@import url("assets/css/buttons.css");
+@import url("assets/css/forms.css");
+@import url("assets/css/navbar.css");
+@import url("assets/css/tabs.css");
+@import url("assets/css/pages.css");
+@import url("assets/css/products.css");
+@import url("assets/css/product-details.css");
+@import url("assets/css/loader.css");
+
+.theme-switcher {
+    min-width: auto;
+    padding: 5px;
+}
+
+.dark {
+    color: #FFF;
+    --neutral-5: #222;
+    --surface-color: #444;
+    --surface-shadow: #222;
+}
